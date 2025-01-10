@@ -36,7 +36,7 @@ public class AppService {
 
             for (JsonNode node : rootNode) {
                 double valor = node.get("valor").asDouble();
-                if (valor > 0) { // Ignorar dias sem faturamento
+                if (valor > 0) {
                     faturamentos.add(valor);
                 }
             }
@@ -87,8 +87,14 @@ public class AppService {
     }
 
     private String reverseString(String str) {
-        StringBuilder sb = new StringBuilder(str);
-        return sb.reverse().toString(); // Reverso da string
+        char[] chars = str.toCharArray();
+        StringBuilder reversed = new StringBuilder();
+
+        for (int i = chars.length - 1; i >= 0; i--) {
+            reversed.append(chars[i]);
+        }
+
+        return reversed.toString();
     }
 
     private boolean isFibonacci(int number) {
