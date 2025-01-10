@@ -35,6 +35,8 @@ public class App
             throw new RuntimeException("Houve algum problema ao ler o número informado");
         }
 
+        System.out.println( "/////////////////////////////////////////////////////////////" );
+
         System.out.println( "QUESTÃO 3:" );
 
         try {
@@ -70,6 +72,13 @@ public class App
             System.err.println("Erro ao ler o arquivo JSON: " + e.getMessage());
         }
 
+        System.out.println( "/////////////////////////////////////////////////////////////" );
+
+        System.out.println( "QUESTÃO 4:" );
+
+        appService.monthlyBilling();
+
+        System.out.println( "/////////////////////////////////////////////////////////////" );
 
 
     }
