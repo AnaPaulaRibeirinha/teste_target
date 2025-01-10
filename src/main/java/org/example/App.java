@@ -80,6 +80,17 @@ public class App
 
         System.out.println( "/////////////////////////////////////////////////////////////" );
 
+        System.out.println( "QUESTÃO 5:" );
+
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Informe uma frase");
+            String frase = scanner.nextLine();
+            System.out.println("Frase informada: " + frase);
+            System.out.println("Frase invertidade: " + appService.reverseString(frase));
+        } catch (Exception e) {
+            throw new RuntimeException("Houve algum problema ao ler a frase");
+        }
 
     }
 }

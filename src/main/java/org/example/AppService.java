@@ -34,4 +34,9 @@ public class AppService {
         System.out.printf("ES: %.2f%%%n", (es / total) * 100);
         System.out.printf("Outros: %.2f%%%n", (outros / total) * 100);
     }
+
+    public String reverseString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString(); // Reverso da string
+    }
 }
